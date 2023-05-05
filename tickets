@@ -1,0 +1,19 @@
+from abc import ABC, abstractmethod
+
+
+class Ticket(ABC):
+    @abstractmethod
+    def buy(self):
+        pass
+
+    @abstractmethod
+    def to_use(self):
+        pass
+
+
+class AeroTicket(Ticket):
+    def to_use(self):
+        print("Билет на самолет использован")
+
+    def buy(self):
+        print("Билет на самолет куплен")
